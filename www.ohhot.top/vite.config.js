@@ -183,7 +183,8 @@ export default defineConfig({
   // },
   
   // 基础路径（用于部署在子路径下）
-  base: '/',
+  // 修复EdgeOne部署问题：使用相对路径
+  base: process.env.NODE_ENV === 'production' ? './' : '/',
   
   // 日志级别
   logLevel: 'info',
