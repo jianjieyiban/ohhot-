@@ -1,0 +1,244 @@
+.my-applications-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding: 24px 0;
+}
+
+.my-applications-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 访问受限样式 */
+.access-denied-card {
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.access-denied {
+  padding: 60px 20px;
+}
+
+.denied-icon {
+  font-size: 64px;
+  color: #ff4d4f;
+  margin-bottom: 24px;
+}
+
+.access-denied h3 {
+  margin: 0 0 16px 0;
+  font-size: 24px;
+  color: #1f1f1f;
+}
+
+.access-denied p {
+  margin: 0 0 32px 0;
+  font-size: 16px;
+  color: #666;
+}
+
+/* 统计信息行 */
+.stats-row {
+  margin-bottom: 24px;
+}
+
+.stats-row .ant-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.stats-row .ant-statistic-title {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.stats-row .ant-statistic-content {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* 申请记录卡片 */
+.applications-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: none;
+  overflow: hidden;
+}
+
+.applications-card .ant-card-head {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 20px 24px;
+}
+
+.applications-card .ant-card-head-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f1f1f;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.card-header span {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* 表格样式 */
+.applications-card .ant-table {
+  border-radius: 0 0 8px 8px;
+}
+
+.applications-card .ant-table-thead > tr > th {
+  background: #fafafa;
+  font-weight: 600;
+  color: #1f1f1f;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.applications-card .ant-table-tbody > tr > td {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.applications-card .ant-table-tbody > tr:hover > td {
+  background: #f5f8ff;
+}
+
+/* 职位信息单元格 */
+.job-info-cell {
+  padding: 8px 0;
+}
+
+.job-title {
+  font-weight: 500;
+  color: #1f1f1f;
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #666;
+}
+
+.company-info span:not(:last-child) {
+  margin-right: 4px;
+}
+
+/* 标签样式 */
+.applications-card .ant-tag {
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 2px 8px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* 操作按钮 */
+.applications-card .ant-btn-link {
+  padding: 0;
+  height: auto;
+  font-size: 12px;
+}
+
+.applications-card .ant-btn-link:hover {
+  background: transparent;
+}
+
+/* 加载状态 */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .my-applications-page {
+    padding: 16px 0;
+  }
+  
+  .my-applications-container {
+    padding: 0 16px;
+  }
+  
+  .stats-row {
+    margin-bottom: 16px;
+  }
+  
+  .stats-row .ant-col {
+    margin-bottom: 16px;
+  }
+  
+  .stats-row .ant-statistic-content {
+    font-size: 24px;
+  }
+  
+  .applications-card .ant-card-head {
+    padding: 16px;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .card-header .ant-btn {
+    width: 100%;
+  }
+  
+  .applications-card .ant-table {
+    font-size: 12px;
+  }
+  
+  .job-title {
+    font-size: 13px;
+  }
+  
+  .company-info {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .my-applications-container {
+    padding: 0 12px;
+  }
+  
+  .applications-card .ant-card-head {
+    padding: 12px;
+  }
+  
+  .card-header span {
+    font-size: 18px;
+  }
+  
+  .stats-row .ant-statistic-content {
+    font-size: 20px;
+  }
+  
+  .applications-card .ant-table-thead > tr > th,
+  .applications-card .ant-table-tbody > tr > td {
+    padding: 8px 4px;
+  }
+  
+  .stats-row .ant-col {
+    margin-bottom: 12px;
+  }
+}

@@ -1,0 +1,280 @@
+/* 滚动动画组件样式 */
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+/* 基础动画类 */
+.animate-fadeIn {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.animate-slideInLeft {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+.animate-slideInRight {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+.animate-slideInUp {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.animate-slideInDown {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.animate-zoomIn {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+.animate-zoomOut {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+.animate-bounceIn {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+.animate-flipInX {
+  opacity: 1 !important;
+  transform: rotateX(0) !important;
+}
+
+.animate-flipInY {
+  opacity: 1 !important;
+  transform: rotateY(0) !important;
+}
+
+.animate-rotateIn {
+  opacity: 1 !important;
+  transform: rotate(0) !important;
+}
+
+/* 初始状态 */
+.scroll-animation[data-animation-type="fadeIn"] {
+  opacity: 0;
+}
+
+.scroll-animation[data-animation-type="slideInLeft"] {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.scroll-animation[data-animation-type="slideInRight"] {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+.scroll-animation[data-animation-type="slideInUp"] {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.scroll-animation[data-animation-type="slideInDown"] {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+.scroll-animation[data-animation-type="zoomIn"] {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.scroll-animation[data-animation-type="zoomOut"] {
+  opacity: 0;
+  transform: scale(1.5);
+}
+
+.scroll-animation[data-animation-type="bounceIn"] {
+  opacity: 0;
+  transform: scale(0.3);
+}
+
+.scroll-animation[data-animation-type="flipInX"] {
+  opacity: 0;
+  transform: rotateX(90deg);
+}
+
+.scroll-animation[data-animation-type="flipInY"] {
+  opacity: 0;
+  transform: rotateY(90deg);
+}
+
+.scroll-animation[data-animation-type="rotateIn"] {
+  opacity: 0;
+  transform: rotate(-180deg);
+}
+
+/* 动画延迟 */
+.scroll-animation.delay-100 {
+  transition-delay: 0.1s;
+}
+
+.scroll-animation.delay-200 {
+  transition-delay: 0.2s;
+}
+
+.scroll-animation.delay-300 {
+  transition-delay: 0.3s;
+}
+
+.scroll-animation.delay-400 {
+  transition-delay: 0.4s;
+}
+
+.scroll-animation.delay-500 {
+  transition-delay: 0.5s;
+}
+
+.scroll-animation.delay-600 {
+  transition-delay: 0.6s;
+}
+
+.scroll-animation.delay-700 {
+  transition-delay: 0.7s;
+}
+
+.scroll-animation.delay-800 {
+  transition-delay: 0.8s;
+}
+
+.scroll-animation.delay-900 {
+  transition-delay: 0.9s;
+}
+
+.scroll-animation.delay-1000 {
+  transition-delay: 1s;
+}
+
+/* 动画持续时间 */
+.scroll-animation.duration-fast {
+  transition-duration: 0.3s;
+}
+
+.scroll-animation.duration-normal {
+  transition-duration: 0.6s;
+}
+
+.scroll-animation.duration-slow {
+  transition-duration: 1s;
+}
+
+/* 缓动函数 */
+.scroll-animation.ease-linear {
+  transition-timing-function: linear;
+}
+
+.scroll-animation.ease-in {
+  transition-timing-function: ease-in;
+}
+
+.scroll-animation.ease-out {
+  transition-timing-function: ease-out;
+}
+
+.scroll-animation.ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+
+.scroll-animation.ease-bounce {
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .scroll-animation {
+    transition-duration: 0.4s;
+  }
+  
+  .scroll-animation[data-animation-type="slideInLeft"],
+  .scroll-animation[data-animation-type="slideInRight"] {
+    transform: translateX(0);
+  }
+  
+  .scroll-animation[data-animation-type="slideInUp"],
+  .scroll-animation[data-animation-type="slideInDown"] {
+    transform: translateY(30px);
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-animation {
+    transition-duration: 0.3s;
+  }
+}
+
+/* 减少动画偏好 */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-animation {
+    transition: none !important;
+    animation: none !important;
+  }
+  
+  .scroll-animation[data-animation-visible="true"] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* 高对比度模式 */
+@media (prefers-contrast: high) {
+  .scroll-animation {
+    transition-duration: 0.3s;
+  }
+}
+
+/* 打印样式 */
+@media print {
+  .scroll-animation {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* 性能优化 */
+.scroll-animation {
+  will-change: transform, opacity;
+}
+
+/* 无障碍支持 */
+.scroll-animation:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* 加载状态 */
+.scroll-animation.loading {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+/* 错误状态 */
+.scroll-animation.error {
+  opacity: 1;
+  transform: none;
+  background-color: rgba(220, 53, 69, 0.1);
+  border: 1px solid #dc3545;
+}

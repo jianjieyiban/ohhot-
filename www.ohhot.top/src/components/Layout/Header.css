@@ -1,0 +1,584 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #87ceeb 0%, #b0e2ff 100%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-bottom: 1px solid #87ceeb;
+  margin: 0;
+  padding: 0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  height: 60px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Logo样式 */
+.header-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  margin: 0;
+  padding: 0;
+}
+
+.header-logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-image {
+  height: 32px;
+  margin-right: 10px;
+  /* 移除滤镜，显示原始logo颜色 */
+}
+
+.logo-text {
+  color: #000000;
+  font-weight: 800;
+  text-shadow: none;
+}
+
+/* 搜索框样式 */
+.header-search {
+  flex: 1;
+  max-width: 300px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+.search-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  color: #666;
+  z-index: 1;
+}
+
+.search-input {
+  width: 100%;
+  padding: 6px 10px 6px 30px;
+  border: 1px solid #d9d9d9;
+  border-radius: 0;
+  font-size: 13px;
+  transition: all 0.3s ease;
+  background: #fafafa;
+  margin: 0;
+  outline: none;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #1e90ff;
+  background: white;
+  box-shadow: 0 0 0 2px rgba(30, 144, 255, 0.2);
+}
+
+/* 导航菜单样式 */
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+.nav-link {
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  position: relative;
+  border: 1px solid transparent;
+  margin: 0;
+  outline: none;
+}
+
+.nav-link:hover {
+  color: #1e90ff;
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(30, 144, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.nav-link.active {
+  color: #fff;
+  background: linear-gradient(135deg, #1e90ff 0%, #00bfff 100%);
+  box-shadow: 0 2px 10px rgba(30, 144, 255, 0.3);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background: linear-gradient(135deg, #1e90ff 0%, #00bfff 100%);
+  border-radius: 1px;
+}
+
+/* 管理员后台按钮样式 */
+.admin-dashboard-btn {
+  border: 1px solid rgba(24, 144, 255, 0.7) !important;
+  background: rgba(24, 144, 255, 0.1) !important;
+  color: #1890ff !important;
+  font-weight: 600 !important;
+  border-radius: 4px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 4px rgba(24, 144, 255, 0.2) !important;
+}
+
+.admin-dashboard-btn:hover {
+  background: rgba(24, 144, 255, 0.2) !important;
+  border-color: #1890ff !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 8px rgba(24, 144, 255, 0.3) !important;
+}
+
+/* 管理员入口样式 */
+.admin-secret-btn {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: rgba(255, 0, 0, 1);
+  border: 1px solid rgba(255, 0, 0, 1);
+  cursor: pointer;
+  z-index: 1001;
+  transition: all 0.2s ease;
+}
+
+.admin-secret-btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+}
+
+.admin-secret-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+/* 用户操作区样式 */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  position: relative; /* 为绝对定位的管理员入口提供参考 */
+}
+
+.action-btn {
+  border: none;
+  background: transparent;
+  color: #2c3e50;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  margin: 0;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.action-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #1e90ff;
+  transform: translateY(-1px);
+}
+
+.mobile-action-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 8px;
+  padding: 12px 16px;
+  font-size: 16px;
+}
+
+.create-job-btn {
+  background: linear-gradient(135deg, #ff4d4f 0%, #ff7875 100%);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: '黑体', sans-serif;
+  color: #000000;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 12px rgba(255, 77, 79, 0.3);
+  margin: 0;
+  padding: 10px 20px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.create-job-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.create-job-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+}
+
+.create-job-btn:hover::before {
+  left: 100%;
+}
+
+.create-job-btn:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(30, 144, 255, 0.2);
+  margin: 0;
+}
+
+.user-info:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(30, 144, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.user-avatar {
+  background: linear-gradient(135deg, #1e90ff 0%, #00bfff 100%);
+}
+
+.user-name {
+  font-size: 13px;
+  color: #2c3e50;
+  font-weight: 600;
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0 16px;
+    height: 50px;
+  }
+
+  .header-search {
+    display: none;
+  }
+
+  .header-nav {
+    gap: 12px;
+  }
+
+  .nav-link {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .header-logo {
+    font-size: 18px;
+  }
+
+  .logo-image {
+    height: 28px;
+    margin-right: 8px;
+  }
+
+  .action-btn {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .user-info {
+    padding: 4px 8px;
+    gap: 8px;
+  }
+
+  .user-name {
+    font-size: 12px;
+    max-width: 80px;
+  }
+}
+
+/* 安全提醒样式 */
+.security-notice {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+  border-top: 1px solid #ffecb3;
+  padding: 8px 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #856404;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.notice-icon {
+  font-size: 14px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.security-notice:hover {
+  background: linear-gradient(135deg, #ffeaa7 0%, #ffd54f 100%);
+  color: #5d4200;
+}
+
+@media (max-width: 480px) {
+  .user-name {
+    display: none;
+  }
+
+  .create-job-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .create-job-btn .anticon {
+    margin: 0;
+  }
+
+  .header-nav {
+    gap: 8px;
+  }
+
+  .nav-link {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  .logo-text {
+    display: none;
+  }
+}
+
+/* 移动端汉堡菜单按钮 */
+.mobile-menu-btn {
+  display: none;
+  border: none;
+  background: transparent;
+  color: #666;
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-btn:hover {
+  background: #f5f5f5;
+  color: #1890ff;
+}
+
+/* 移动端抽屉菜单样式 */
+.mobile-drawer .ant-drawer-header {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 16px 24px;
+}
+
+.mobile-drawer .ant-drawer-body {
+  padding: 0;
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 16px 24px;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.mobile-nav-link:hover {
+  background: #f5f5f5;
+  color: #1890ff;
+}
+
+.mobile-nav-link.active {
+  background: #e6f7ff;
+  color: #1890ff;
+  border-left: 4px solid #1890ff;
+}
+
+.mobile-user-section {
+  margin-top: auto;
+  padding: 20px 24px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.mobile-user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 12px;
+  background: #fafafa;
+  border-radius: 8px;
+}
+
+.mobile-user-avatar {
+  background: #1890ff;
+}
+
+.mobile-user-name {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mobile-user-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobile-user-actions .ant-btn {
+  justify-content: flex-start;
+  text-align: left;
+  padding: 8px 12px;
+  height: auto;
+  border: none;
+  background: transparent;
+  color: #666;
+}
+
+.mobile-user-actions .ant-btn:hover {
+  background: #f5f5f5;
+  color: #1890ff;
+}
+
+.mobile-auth-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mobile-auth-actions .ant-btn {
+  height: 40px;
+  font-size: 14px;
+}
+
+/* 移动端响应式设计 */
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  .header-actions {
+    display: none;
+  }
+
+  .header-search {
+    display: none;
+  }
+
+  .header-container {
+    justify-content: space-between;
+  }
+
+  .header-logo {
+    flex: 0 0 auto;
+  }
+}
+
+/* 超小屏幕优化 */
+@media (max-width: 360px) {
+  .mobile-drawer {
+    width: 100% !important;
+  }
+  
+  .mobile-nav-link {
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+  
+  .mobile-user-section {
+    padding: 16px 20px;
+  }
+}

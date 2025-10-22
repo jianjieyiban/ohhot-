@@ -1,0 +1,289 @@
+/* JobList.css - 职位列表页面样式 */
+
+.jobs-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px 0;
+  padding-top: 40px; /* 增加顶部内边距，确保内容不被Header遮挡 */
+}
+
+.jobs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.jobs-hero {
+  text-align: center;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.jobs-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.jobs-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.search-section {
+  margin-bottom: 40px;
+}
+
+.search-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.jobs-content {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.jobs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.jobs-header h2 {
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
+  font-weight: 600;
+}
+
+.jobs-header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.jobs-count {
+  font-size: 1.1rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.job-card {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.job-card .ant-card-body {
+  padding: 20px;
+}
+
+.company-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+}
+
+.company-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.job-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.job-title:hover {
+  color: #1890ff;
+}
+
+.job-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.job-favorite-icon {
+  font-size: 1.2rem;
+  margin-left: 8px;
+}
+
+.job-meta {
+  margin-top: 12px;
+}
+
+.company-name {
+  font-size: 1.1rem;
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.job-tags {
+  margin-bottom: 12px;
+}
+
+.job-tags .ant-tag {
+  border-radius: 6px;
+  font-size: 0.9rem;
+  padding: 2px 8px;
+}
+
+.job-desc {
+  color: #888;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-top: 8px;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .jobs-container {
+    padding: 0 15px;
+  }
+  
+  .jobs-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .jobs-hero p {
+    font-size: 1rem;
+  }
+  
+  .search-card,
+  .jobs-content {
+    padding: 20px;
+  }
+  
+  .jobs-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .jobs-header h2 {
+    font-size: 1.6rem;
+  }
+  
+  .company-avatar {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .job-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .jobs-hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .search-card,
+  .jobs-content {
+    padding: 15px;
+  }
+  
+  .jobs-header h2 {
+    font-size: 1.4rem;
+  }
+  
+  .company-avatar {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .avatar-placeholder {
+    font-size: 1.2rem;
+  }
+}
+
+/* 动画效果 */
+.job-card-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.job-card-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease;
+}
+
+/* 滚动到顶部按钮样式 */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+}
+
+/* 空状态样式 */
+.ant-empty {
+  padding: 60px 0;
+}
+
+.ant-empty-image {
+  height: 120px;
+}
+
+.ant-empty-description {
+  font-size: 1.1rem;
+  color: #666;
+}

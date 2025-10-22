@@ -1,0 +1,27 @@
+﻿
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : {"success":true,"data":[{"id":34,"city":"上海","province":"上海","distri
+                    ct":"","is_hot":true,"is_active":true,"created_at":"2025-10-17T15:54
+                    :51.000Z","updated_at":"2025-10-17T15:54:51.000Z","tier_name":"一...
+RawContent        : HTTP/1.1 200 OK
+                    Content-Security-Policy: default-src 'self';base-uri 'self';font-src
+                     'self' https: data:;form-action 'self';frame-ancestors 'self';img-s
+                    rc 'self' data:;object-src 'none';script-src 's...
+Forms             : {}
+Headers           : {[Content-Security-Policy, default-src 'self';base-uri 'self';font-s
+                    rc 'self' https: data:;form-action 'self';frame-ancestors 'self';img
+                    -src 'self' data:;object-src 'none';script-src 'self';script-src-att
+                    r 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-re
+                    quests], [Cross-Origin-Embedder-Policy, require-corp], [Cross-Origin
+                    -Opener-Policy, same-origin], [Cross-Origin-Resource-Policy, cross-o
+                    rigin]...}
+Images            : {}
+InputFields       : {}
+Links             : {}
+ParsedHtml        : mshtml.HTMLDocumentClass
+RawContentLength  : 2265
+
+
+

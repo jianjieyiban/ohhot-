@@ -1,0 +1,96 @@
+/* 视差滚动组件样式 */
+.parallax {
+  position: relative;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+/* 性能优化 */
+.parallax {
+  transform: translateZ(0);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .parallax[data-parallax-speed="0.5"] {
+    transform: none !important;
+  }
+  
+  .parallax[data-parallax-speed="0.3"] {
+    transform: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .parallax {
+    transform: none !important;
+  }
+}
+
+/* 减少动画偏好 */
+@media (prefers-reduced-motion: reduce) {
+  .parallax {
+    transform: none !important;
+  }
+}
+
+/* 高对比度模式 */
+@media (prefers-contrast: high) {
+  .parallax {
+    transform: none !important;
+  }
+}
+
+/* 打印样式 */
+@media print {
+  .parallax {
+    transform: none !important;
+  }
+}
+
+/* 无障碍支持 */
+.parallax:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* 特殊效果 */
+.parallax.deep {
+  z-index: -1;
+}
+
+.parallax.shallow {
+  z-index: 1;
+}
+
+/* 视差层容器 */
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.parallax-layer.background {
+  z-index: -1;
+}
+
+.parallax-layer.foreground {
+  z-index: 1;
+}
+
+/* 视差滚动组 */
+.parallax-group {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-group .parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,179 @@
+/* 滚动进度指示器样式 */
+.scroll-progress {
+  background-color: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-progress.scrolling {
+  opacity: 1;
+}
+
+.scroll-progress:not(.scrolling) {
+  opacity: 0.7;
+}
+
+.scroll-progress-bar {
+  transition: width 0.1s ease, height 0.1s ease;
+  position: relative;
+}
+
+/* 动画效果 */
+.scroll-progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* 进度百分比样式 */
+.scroll-progress-percentage {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .scroll-progress {
+    height: 3px !important;
+  }
+  
+  .scroll-progress[data-position="left"],
+  .scroll-progress[data-position="right"] {
+    width: 3px !important;
+  }
+  
+  .scroll-progress-percentage {
+    font-size: 10px;
+    padding: 1px 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-progress {
+    height: 2px !important;
+  }
+  
+  .scroll-progress[data-position="left"],
+  .scroll-progress[data-position="right"] {
+    width: 2px !important;
+  }
+  
+  .scroll-progress-percentage {
+    display: none;
+  }
+}
+
+/* 减少动画偏好 */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress-bar::after {
+    animation: none;
+  }
+  
+  .scroll-progress-bar {
+    transition: none;
+  }
+  
+  .scroll-progress {
+    transition: none;
+  }
+}
+
+/* 高对比度模式 */
+@media (prefers-contrast: high) {
+  .scroll-progress {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .scroll-progress-bar {
+    background-color: #000 !important;
+  }
+}
+
+/* 打印样式 */
+@media print {
+  .scroll-progress {
+    display: none !important;
+  }
+}
+
+/* 无障碍支持 */
+.scroll-progress:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* 主题变体 */
+.scroll-progress.theme-light {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.scroll-progress.theme-dark {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.scroll-progress.theme-glass {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* 特殊效果 */
+.scroll-progress.effect-pulse .scroll-progress-bar {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.scroll-progress.effect-glow .scroll-progress-bar {
+  box-shadow: 0 0 10px currentColor;
+}
+
+/* 错误状态 */
+.scroll-progress.error {
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+.scroll-progress.error .scroll-progress-bar {
+  background-color: #dc3545 !important;
+}

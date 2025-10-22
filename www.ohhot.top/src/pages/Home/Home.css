@@ -1,0 +1,1150 @@
+.home-page {
+  min-height: 100vh;
+  padding-top: 60px; /* 添加顶部内边距，避免被固定Header遮挡 */
+}
+
+/* 轮播图样式 */
+.hero-section {
+  margin-bottom: 80px;
+}
+
+.home-carousel .slick-dots {
+  bottom: 40px;
+}
+
+.home-carousel .slick-dots li button {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.home-carousel .slick-dots li.slick-active button {
+  background: #fff;
+  width: 16px;
+  height: 16px;
+}
+
+.carousel-item {
+  height: 450px;
+}
+
+.carousel-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.carousel-text {
+  flex: 1;
+  max-width: 600px;
+  color: #fff;
+}
+
+.carousel-title {
+  color: #fff !important;
+  font-size: 42px !important;
+  font-weight: 700 !important;
+  margin-bottom: 20px !important;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  line-height: 1.2;
+}
+
+.carousel-description {
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-size: 16px !important;
+  margin-bottom: 30px !important;
+  line-height: 1.6;
+}
+
+.cta-button {
+  height: 48px;
+  padding: 0 40px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.carousel-image img {
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* 轮播图响应式设计 */
+@media (max-width: 1200px) {
+  .carousel-content {
+    max-width: 1000px;
+    padding: 0 30px;
+  }
+  
+  .carousel-title {
+    font-size: 42px !important;
+  }
+  
+  .carousel-image img {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 992px) {
+  .carousel-item {
+    height: 450px;
+  }
+  
+  .carousel-content {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .carousel-text {
+    max-width: 600px;
+    order: 2;
+  }
+  
+  .carousel-image {
+    order: 1;
+    justify-content: center;
+  }
+  
+  .carousel-image img {
+    max-width: 300px;
+  }
+  
+  .carousel-title {
+    font-size: 36px !important;
+  }
+  
+  .carousel-description {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+    height: 400px;
+  }
+  
+  .carousel-content {
+    padding: 0 20px;
+    gap: 20px;
+  }
+  
+  .carousel-title {
+    font-size: 28px !important;
+    margin-bottom: 12px !important;
+  }
+  
+  .carousel-description {
+    font-size: 14px !important;
+    margin-bottom: 24px !important;
+  }
+  
+  .carousel-image img {
+    max-width: 250px;
+  }
+  
+  .cta-button {
+    height: 44px;
+    padding: 0 30px;
+    font-size: 14px;
+  }
+  
+  .home-carousel .slick-dots {
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-item {
+    height: 350px;
+  }
+  
+  .carousel-content {
+    padding: 0 15px;
+    gap: 15px;
+  }
+  
+  .carousel-title {
+    font-size: 24px !important;
+  }
+  
+  .carousel-description {
+    font-size: 13px !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .carousel-image img {
+    max-width: 200px;
+  }
+  
+  .cta-button {
+    height: 48px;
+    padding: 0 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .carousel-image img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .search-fields {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .search-input,
+  .search-select {
+    width: 100%;
+  }
+  
+  .stats-section .ant-col {
+    margin-bottom: 24px;
+  }
+  
+  .featured-jobs-section,
+  .hot-cities-section {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item {
+    height: 400px;
+  }
+  
+  .carousel-title {
+    font-size: 24px !important;
+  }
+  
+  .search-section {
+    padding: 40px 0;
+  }
+  
+  .search-form {
+    padding: 20px;
+  }
+}
+
+/* 城市标签样式 */
+.cities-tags-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.city-tag {
+  font-size: 14px !important;
+  padding: 8px 16px !important;
+  height: auto !important;
+  line-height: 1.5 !important;
+  border-radius: 20px !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #d9d9d9 !important;
+  background-color: #fafafa !important;
+  color: #595959 !important;
+  text-align: center;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 40px;
+}
+
+/* 一线城市特殊样式 */
+.city-tag[data-tier="tier1"] {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%) !important;
+  color: white !important;
+  border-color: #ff6b6b !important;
+  font-weight: 600;
+}
+
+.city-tag[data-tier="tier1"]:hover {
+  background: linear-gradient(135deg, #ff5252 0%, #d63031 100%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+/* 新一线城市特殊样式 */
+.city-tag[data-tier="tier2"] {
+  background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%) !important;
+  color: white !important;
+  border-color: #74b9ff !important;
+  font-weight: 500;
+}
+
+.city-tag[data-tier="tier2"]:hover {
+  background: linear-gradient(135deg, #6c5ce7 0%, #0984e3 100%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(116, 185, 255, 0.3);
+}
+
+/* 二线城市特殊样式 */
+.city-tag[data-tier="tier3"] {
+  background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%) !important;
+  color: white !important;
+  border-color: #a29bfe !important;
+}
+
+.city-tag[data-tier="tier3"]:hover {
+  background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(162, 155, 254, 0.3);
+}
+
+.city-tag:hover {
+  border-color: #1890ff !important;
+  background-color: #e6f7ff !important;
+  color: #1890ff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.2);
+}
+
+/* 城市标签响应式设计 */
+@media (max-width: 768px) {
+  .cities-tags-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 8px;
+    margin-top: 20px;
+  }
+  
+  .city-tag {
+    font-size: 12px !important;
+    padding: 6px 12px !important;
+    min-height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cities-tags-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 6px;
+    margin-top: 16px;
+  }
+  
+  .city-tag {
+    font-size: 11px !important;
+    padding: 4px 8px !important;
+    min-height: 32px;
+  }
+}
+
+/* 搜索区域样式 */
+.search-section {
+  background: #e6f7ff;
+  padding: 20px 0;
+  margin-bottom: 0;
+}
+
+.search-container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.search-title {
+  color: #1f1f1f !important;
+  margin-bottom: 16px !important;
+  font-size: 24px !important;
+  font-weight: 700;
+}
+
+.search-form {
+  background: white;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.search-fields {
+  width: 100%;
+  justify-content: center;
+  gap: 8px;
+}
+
+.search-input,
+.search-select {
+  width: 140px;
+  height: 40px;
+  font-size: 14px;
+}
+
+/* 确保城市选择器与其他输入框宽度一致 */
+.search-select .ant-select-selector {
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.search-button {
+  height: 40px;
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* 搜索区域响应式设计 */
+@media (max-width: 992px) {
+  .search-section {
+    padding: 16px 0;
+    margin-bottom: 0;
+  }
+  
+  .search-title {
+    margin-bottom: 12px !important;
+    font-size: 20px !important;
+  }
+  
+  .search-form {
+    padding: 10px;
+    max-width: 400px;
+  }
+  
+  .search-fields {
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .search-input,
+  .search-select {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    height: 34px;
+  }
+  
+  .search-button {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    height: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-section {
+    padding: 12px 0;
+    margin-bottom: 0;
+  }
+  
+  .search-container {
+    padding: 0 16px;
+  }
+  
+  .search-title {
+    margin-bottom: 10px !important;
+    font-size: 18px !important;
+  }
+  
+  .search-form {
+    padding: 8px;
+    max-width: 320px;
+  }
+  
+  .search-fields {
+    gap: 4px;
+  }
+  
+  .search-input,
+  .search-select {
+    max-width: 100%;
+    height: 32px;
+  }
+  
+  .search-button {
+    height: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .search-section {
+    padding: 8px 0;
+    margin-bottom: 0;
+  }
+  
+  .search-title {
+    margin-bottom: 8px !important;
+    font-size: 16px !important;
+  }
+  
+  .search-form {
+    padding: 6px;
+    max-width: 280px;
+  }
+  
+  .search-fields {
+    gap: 4px;
+  }
+  
+  .search-button {
+    height: 30px;
+    font-size: 12px;
+  }
+}
+
+/* 数据统计样式 */
+.stats-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.stat-item .ant-statistic-content {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1890ff;
+}
+
+.stat-item .ant-statistic-title {
+  font-size: 18px;
+  color: #666;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+/* 数据统计响应式设计 */
+@media (max-width: 992px) {
+  .stats-section {
+    padding: 50px 0;
+  }
+  
+  .stat-item .ant-statistic-content {
+    font-size: 32px;
+  }
+  
+  .stat-item .ant-statistic-title {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-section {
+    padding: 40px 0;
+  }
+  
+  .stat-item .ant-statistic-content {
+    font-size: 28px;
+  }
+  
+  .stat-item .ant-statistic-title {
+    font-size: 14px;
+  }
+  
+  .stats-row {
+    gap: 20px;
+  }
+  
+  .stat-item {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .stats-section {
+    padding: 30px 0;
+  }
+  
+  .stat-item .ant-statistic-content {
+    font-size: 24px;
+  }
+  
+  .stat-item .ant-statistic-title {
+    font-size: 13px;
+  }
+  
+  .stats-row {
+    gap: 15px;
+  }
+  
+  .stat-item {
+    margin-bottom: 15px;
+  }
+}
+
+/* 通用区块样式 */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px !important;
+  color: #1f1f1f !important;
+}
+
+/* 热门职位样式 */
+.featured-jobs-section {
+  padding: 60px 0;
+  background: white;
+}
+
+.job-card {
+  height: 200px;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.job-card:hover {
+  border-color: #1890ff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(24, 144, 255, 0.15);
+}
+
+.job-content {
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.company-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.avatar-placeholder {
+  font-size: 16px;
+  font-weight: 600;
+  color: #666;
+}
+
+.job-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f1f1f;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.company-name {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.job-location {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 12px;
+}
+
+.job-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.job-tags .ant-tag {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.section-footer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* 热门职位响应式设计 */
+@media (max-width: 992px) {
+  .featured-jobs-section {
+    padding: 50px 0;
+  }
+  
+  .job-card {
+    height: 160px;
+  }
+  
+  .company-avatar {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .avatar-placeholder {
+    font-size: 18px;
+  }
+  
+  .section-title {
+    margin-bottom: 30px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-jobs-section {
+    padding: 40px 0;
+  }
+  
+  .job-card {
+    height: 150px;
+    margin-bottom: 16px;
+  }
+  
+  .company-avatar {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .avatar-placeholder {
+    font-size: 16px;
+  }
+  
+  .section-title {
+    margin-bottom: 25px !important;
+    font-size: 24px !important;
+  }
+  
+  .job-tags .ant-tag {
+    font-size: 12px;
+    padding: 2px 8px;
+  }
+  
+  .section-footer {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .featured-jobs-section {
+    padding: 30px 0;
+  }
+  
+  .job-card {
+    height: 140px;
+    margin-bottom: 12px;
+  }
+  
+  .company-avatar {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .avatar-placeholder {
+    font-size: 14px;
+  }
+  
+  .section-title {
+    margin-bottom: 20px !important;
+    font-size: 20px !important;
+  }
+  
+  .job-tags .ant-tag {
+    font-size: 11px;
+    padding: 1px 6px;
+  }
+  
+  .section-footer {
+    margin-top: 25px;
+  }
+  
+  .section-footer .ant-btn {
+    height: 36px;
+    padding: 0 20px;
+    font-size: 14px;
+  }
+}
+
+/* 合肥特色区域样式 */
+.hefei-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #fff0f0 0%, #ffe6e6 30%, #fff5f5 70%, #fff0f0 100%);
+  border-top: 4px solid #e74c3c;
+  border-bottom: 4px solid #e74c3c;
+  position: relative;
+  overflow: hidden;
+}
+
+.hefei-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(231, 76, 60, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(231, 76, 60, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hefei-section .hefei-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hefei-section .hefei-highlight {
+  color: #e74c3c;
+  font-weight: 800;
+  text-shadow: 0 3px 6px rgba(231, 76, 60, 0.4);
+  position: relative;
+  display: inline-block;
+}
+
+.hefei-section .hefei-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #e74c3c, transparent);
+  border-radius: 2px;
+}
+
+.hefei-section .hefei-description {
+  font-size: 16px;
+  color: #7f8c8d;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.hefei-section .subsection-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* 合肥下级地区样式 */
+.hefei-districts {
+  margin-bottom: 60px;
+}
+
+.district-card {
+  border-radius: 12px;
+  border: 2px solid #f8d7da;
+  transition: all 0.3s ease;
+  height: 120px;
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.district-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(231, 76, 60, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.district-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(231, 76, 60, 0.2);
+  border-color: #e74c3c;
+}
+
+.district-card:hover::before {
+  left: 100%;
+}
+
+.district-content {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.district-icon {
+  font-size: 24px;
+  color: #e74c3c;
+  margin-right: 12px;
+}
+
+.district-info {
+  flex: 1;
+}
+
+.district-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 4px;
+}
+
+.district-jobs {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-bottom: 8px;
+}
+
+.district-industries {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+/* 合肥产业园区样式 */
+.hefei-parks {
+  margin-bottom: 40px;
+}
+
+.park-card {
+  border-radius: 12px;
+  border: 2px solid #f8d7da;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  background: white;
+  position: relative;
+}
+
+.park-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(231, 76, 60, 0.1), transparent);
+  transition: left 0.5s ease;
+  z-index: 1;
+}
+
+.park-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(231, 76, 60, 0.2);
+  border-color: #e74c3c;
+}
+
+.park-card:hover::before {
+  left: 100%;
+}
+
+.park-image {
+  height: 120px;
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 32px;
+}
+
+.park-companies {
+  margin-top: 8px;
+}
+
+.park-companies strong {
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+/* 热门城市样式 */
+.hot-cities-section {
+  padding: 60px 0;
+  background: white;
+}
+
+.city-card {
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 16px;
+}
+
+.city-card:hover {
+  border-color: #1890ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(24, 144, 255, 0.1);
+}
+
+.city-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+}
+
+.city-icon {
+  font-size: 24px;
+  color: #1890ff;
+}
+
+.city-info {
+  flex: 1;
+}
+
+.city-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f1f1f;
+  margin-bottom: 4px;
+}
+
+.city-province {
+  font-size: 14px;
+  color: #666;
+}
+
+/* 热门城市响应式设计 */
+@media (max-width: 992px) {
+  .hot-cities-section {
+    padding: 30px 0;
+  }
+  
+  .city-content {
+    gap: 8px;
+    padding: 10px;
+  }
+  
+  .city-icon {
+    font-size: 18px;
+  }
+  
+  .city-name {
+    font-size: 13px;
+  }
+  
+  .city-province {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hot-cities-section {
+    padding: 25px 0;
+  }
+  
+  .city-card {
+    margin-bottom: 10px;
+  }
+  
+  .city-content {
+    gap: 6px;
+    padding: 8px;
+  }
+  
+  .city-icon {
+    font-size: 16px;
+  }
+  
+  .city-name {
+    font-size: 12px;
+  }
+  
+  .city-province {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hot-cities-section {
+    padding: 20px 0;
+  }
+  
+  .city-card {
+    margin-bottom: 8px;
+  }
+  
+  .city-content {
+    gap: 4px;
+    padding: 6px;
+  }
+  
+  .city-icon {
+    font-size: 14px;
+  }
+  
+  .city-name {
+    font-size: 11px;
+  }
+  
+  .city-province {
+    font-size: 9px;
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .carousel-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .carousel-title {
+    font-size: 32px !important;
+  }
+  
+  .carousel-image {
+    display: none;
+  }
+  
+  .search-fields {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .search-input,
+  .search-select {
+    width: 100%;
+  }
+  
+  .stats-section .ant-col {
+    margin-bottom: 24px;
+  }
+  
+  .featured-jobs-section,
+  .hot-cities-section {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item {
+    height: 400px;
+  }
+  
+  .carousel-title {
+    font-size: 24px !important;
+  }
+  
+  .search-section {
+    padding: 40px 0;
+  }
+  
+  .search-form {
+    padding: 20px;
+  }
+}

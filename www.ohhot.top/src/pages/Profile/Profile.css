@@ -1,0 +1,241 @@
+.profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  padding-top: 80px; /* 增加顶部内边距，确保内容不被Header遮挡 */
+}
+
+.profile-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+}
+
+.avatar-section {
+  text-align: center;
+  padding: 24px 0;
+}
+
+.profile-avatar {
+  border: 3px solid #f0f0f0;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.profile-avatar:hover {
+  border-color: #1890ff;
+}
+
+.avatar-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.profile-avatar:hover .avatar-overlay {
+  opacity: 1;
+}
+
+.user-type-tag {
+  margin-top: 8px;
+  padding: 4px 12px;
+  background: #f8f9fa;
+  border-radius: 16px;
+  display: inline-block;
+}
+
+.basic-info {
+  margin-top: 16px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.info-item .anticon {
+  margin-right: 12px;
+  color: #1890ff;
+  font-size: 16px;
+  width: 20px;
+}
+
+.stats {
+  margin-top: 16px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.stat-item .ant-typography {
+  display: block;
+}
+
+.stat-item .ant-typography:first-child {
+  font-size: 24px;
+  color: #1890ff;
+  margin-bottom: 4px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.skill-tag {
+  background: #1890ff;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* 表单样式 */
+.profile-card .ant-form-item-label > label {
+  font-weight: 500;
+  color: #262626;
+}
+
+.profile-card .ant-input,
+.profile-card .ant-select {
+  border-radius: 6px;
+}
+
+.profile-card .ant-input:focus,
+.profile-card .ant-select:focus {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+/* 按钮样式 */
+.profile-card .ant-btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 6px;
+}
+
+.profile-card .ant-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 0 16px;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .avatar-section {
+    padding: 16px 0;
+  }
+  
+  .profile-avatar {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .stat-item {
+    padding: 12px;
+  }
+}
+
+/* 深色主题支持 */
+@media (prefers-color-scheme: dark) {
+  .profile-card {
+    background: #141414;
+    border-color: #303030;
+  }
+  
+  .profile-avatar {
+    border-color: #303030;
+  }
+  
+  .user-type-tag {
+    background: #1f1f1f;
+  }
+  
+  .stat-item {
+    background: #1f1f1f;
+  }
+  
+  .profile-card .ant-form-item-label > label {
+    color: #ffffff;
+  }
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-card {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.profile-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+/* 分割线样式 */
+.ant-divider {
+  border-color: #f0f0f0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ant-divider {
+    border-color: #303030;
+  }
+}
+
+/* 上传组件样式 */
+.ant-upload {
+  display: inline-block;
+}
+
+/* 表单禁用状态 */
+.ant-form-item-disabled .ant-input,
+.ant-form-item-disabled .ant-select {
+  background-color: #f8f9fa;
+  color: #595959;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ant-form-item-disabled .ant-input,
+  .ant-form-item-disabled .ant-select {
+    background-color: #1f1f1f;
+    color: #8c8c8c;
+  }
+}

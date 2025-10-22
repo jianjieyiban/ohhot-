@@ -1,0 +1,246 @@
+.user-profile-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding: 24px 0;
+}
+
+.user-profile-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 加载状态 */
+.user-profile-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+/* 个人资料卡片 */
+.profile-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: none;
+  overflow: hidden;
+}
+
+.profile-card .ant-card-body {
+  padding: 0;
+}
+
+/* 头部区域 */
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 32px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.avatar-section {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.avatar-upload {
+  position: relative;
+  cursor: pointer;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-avatar {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.avatar-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.avatar-upload:hover .avatar-overlay {
+  opacity: 1;
+}
+
+.avatar-upload:hover .profile-avatar {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.user-info h2 {
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  font-weight: 600;
+  color: white;
+}
+
+.user-email {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.user-type {
+  margin: 0;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.edit-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  height: 40px;
+  font-weight: 500;
+}
+
+.edit-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* 表单区域 */
+.profile-card .ant-form {
+  padding: 32px;
+}
+
+.profile-card .ant-form-item-label > label {
+  font-weight: 500;
+  color: #1f1f1f;
+}
+
+.profile-card .ant-input,
+.profile-card .ant-select-selector {
+  border-radius: 6px;
+  border: 1px solid #d9d9d9;
+}
+
+.profile-card .ant-input:focus,
+.profile-card .ant-select-focused .ant-select-selector {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.profile-card .ant-input-affix-wrapper .ant-input {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.profile-card .ant-form-item-disabled .ant-input,
+.profile-card .ant-form-item-disabled .ant-select-selector {
+  background-color: #fafafa;
+  color: #666;
+  border-color: #f0f0f0;
+}
+
+/* 分割线 */
+.profile-card .ant-divider {
+  margin: 0;
+  border-color: #f0f0f0;
+}
+
+/* 操作按钮 */
+.profile-card .ant-form-item:last-child {
+  margin-bottom: 0;
+}
+
+.profile-card .ant-btn-primary {
+  height: 44px;
+  padding: 0 32px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #1890ff 0%, #52c41a 100%);
+  border: none;
+}
+
+.profile-card .ant-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.4);
+}
+
+.profile-card .ant-btn-default {
+  height: 44px;
+  padding: 0 32px;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .user-profile-page {
+    padding: 16px 0;
+  }
+  
+  .user-profile-container {
+    padding: 0 16px;
+  }
+  
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 24px;
+  }
+  
+  .avatar-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  
+  .user-info h2 {
+    font-size: 24px;
+  }
+  
+  .profile-card .ant-form {
+    padding: 24px 16px;
+  }
+  
+  .profile-card .ant-form-item:last-child .ant-space {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .profile-card .ant-form-item:last-child .ant-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-header {
+    padding: 20px;
+  }
+  
+  .profile-card .ant-form {
+    padding: 20px 12px;
+  }
+  
+  .user-info h2 {
+    font-size: 20px;
+  }
+  
+  .profile-avatar {
+    width: 80px !important;
+    height: 80px !important;
+    line-height: 80px !important;
+  }
+}

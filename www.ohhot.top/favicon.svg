@@ -1,0 +1,16 @@
+<svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景圆形 -->
+  <circle cx="90" cy="90" r="80" fill="#1890ff"/>
+  
+  <!-- 人物图标 -->
+  <circle cx="90" cy="70" r="20" fill="white"/>
+  <path d="M70 100 Q90 120 110 100" stroke="white" stroke-width="8" fill="none"/>
+  
+  <!-- 公文包图标 -->
+  <rect x="75" y="120" width="30" height="20" rx="5" fill="#52c41a"/>
+  <rect x="70" y="115" width="40" height="5" rx="2" fill="#52c41a"/>
+  
+  <!-- 星星装饰 -->
+  <polygon points="40,40 42,45 47,45 43,48 44,53 40,50 36,53 37,48 33,45 38,45" fill="#faad14"/>
+  <polygon points="140,40 142,45 147,45 143,48 144,53 140,50 136,53 137,48 133,45 138,45" fill="#faad14"/>
+</svg>

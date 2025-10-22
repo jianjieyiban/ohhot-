@@ -1,0 +1,233 @@
+.job-edit-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding: 24px 0;
+}
+
+.job-edit-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 加载状态 */
+.job-edit-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+/* 编辑头部 */
+.edit-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.back-button {
+  color: #666;
+  font-size: 14px;
+}
+
+.back-button:hover {
+  color: #1890ff;
+}
+
+.edit-header h1 {
+  margin: 0;
+  color: #1f1f1f;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* 编辑卡片 */
+.edit-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.edit-card .ant-card-body {
+  padding: 32px;
+}
+
+/* 表单样式 */
+.edit-card .ant-form-item-label > label {
+  font-weight: 500;
+  color: #1f1f1f;
+}
+
+.edit-card .ant-input,
+.edit-card .ant-select-selector,
+.edit-card .ant-picker,
+.edit-card .ant-input-number {
+  border-radius: 6px;
+  border: 1px solid #d9d9d9;
+}
+
+.edit-card .ant-input:focus,
+.edit-card .ant-select-focused .ant-select-selector,
+.edit-card .ant-picker-focused,
+.edit-card .ant-input-number-focused {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.edit-card .ant-input-affix-wrapper .ant-input {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 分割线 */
+.edit-card .ant-divider {
+  margin: 32px 0 24px 0;
+  border-color: #f0f0f0;
+}
+
+.edit-card .ant-divider-horizontal.ant-divider-with-text-left {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f1f1f;
+}
+
+/* 福利待遇区域 */
+.benefits-section {
+  margin-bottom: 16px;
+}
+
+.benefits-input {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.benefits-input .ant-input {
+  flex: 1;
+}
+
+.add-benefit-btn {
+  white-space: nowrap;
+}
+
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: #f0f8ff;
+  border: 1px solid #d1e9ff;
+  border-radius: 6px;
+  color: #1890ff;
+  font-size: 14px;
+}
+
+.benefit-item span {
+  font-weight: 500;
+}
+
+.benefit-item .ant-btn {
+  color: #ff4d4f;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.benefit-item .ant-btn:hover {
+  background: #fff2f0;
+}
+
+/* 操作按钮 */
+.edit-card .ant-form-item:last-child {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.edit-card .ant-form-item:last-child .ant-space {
+  justify-content: center;
+}
+
+.edit-card .ant-btn-primary {
+  height: 44px;
+  padding: 0 32px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #1890ff 0%, #52c41a 100%);
+  border: none;
+}
+
+.edit-card .ant-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.4);
+}
+
+.edit-card .ant-btn-default {
+  height: 44px;
+  padding: 0 32px;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .job-edit-page {
+    padding: 16px 0;
+  }
+  
+  .job-edit-container {
+    padding: 0 16px;
+  }
+  
+  .edit-card .ant-card-body {
+    padding: 24px 16px;
+  }
+  
+  .edit-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .edit-header h1 {
+    font-size: 24px;
+  }
+  
+  .benefits-input {
+    flex-direction: column;
+  }
+  
+  .add-benefit-btn {
+    width: 100%;
+  }
+  
+  .edit-card .ant-form-item:last-child .ant-space {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .edit-card .ant-form-item:last-child .ant-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .edit-card .ant-card-body {
+    padding: 16px 12px;
+  }
+  
+  .edit-header h1 {
+    font-size: 20px;
+  }
+  
+  .edit-card .ant-divider-horizontal.ant-divider-with-text-left {
+    font-size: 14px;
+  }
+}

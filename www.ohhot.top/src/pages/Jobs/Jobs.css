@@ -1,0 +1,318 @@
+.jobs-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding: 24px 0;
+}
+
+.jobs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 筛选卡片样式 */
+.filters-card {
+  margin-bottom: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.filters-card .ant-card-body {
+  padding: 20px;
+}
+
+/* 搜索筛选器样式 - 确保所有筛选器大小一致 */
+.filters-card .ant-input,
+.filters-card .ant-select,
+.filters-card .ant-btn {
+  height: 40px !important;
+  line-height: 40px !important;
+}
+
+.filters-card .ant-input-affix-wrapper,
+.filters-card .ant-select-selector {
+  height: 40px !important;
+  border-radius: 6px !important;
+}
+
+.filters-card .ant-input-affix-wrapper .ant-input {
+  height: 38px !important;
+  line-height: 38px !important;
+}
+
+.filters-card .ant-select-selection-item,
+.filters-card .ant-select-selection-placeholder {
+  line-height: 38px !important;
+}
+
+.filters-card .ant-btn {
+  border-radius: 6px !important;
+  font-weight: 500;
+}
+
+/* 确保Grid布局中的列对齐 */
+.filters-card .ant-row {
+  align-items: stretch;
+}
+
+.filters-card .ant-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.filters-card .ant-col > * {
+  width: 100%;
+}
+
+/* 职位内容区域 */
+.jobs-content {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.jobs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.jobs-header h2 {
+  margin: 0;
+  color: #1f1f1f;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.jobs-count {
+  color: #666;
+  font-size: 14px;
+}
+
+/* 加载状态 */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+/* 职位卡片样式 */
+.job-card {
+  height: 220px;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-color: #1890ff;
+}
+
+.job-card .ant-card-body {
+  padding: 16px;
+  height: calc(100% - 55px);
+  display: flex;
+  flex-direction: column;
+}
+
+.job-card .ant-card-meta {
+  flex: 1;
+}
+
+.job-card .ant-card-actions {
+  border-top: 1px solid #f0f0f0;
+  background: #fafafa;
+}
+
+.job-card .ant-card-actions > li {
+  margin: 8px 0;
+}
+
+.job-card .ant-card-actions > li:not(:last-child) {
+  border-right: 1px solid #f0f0f0;
+}
+
+/* 公司头像 */
+.company-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1890ff;
+}
+
+/* 职位标题 */
+.job-title {
+  color: #1f1f1f;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.job-title:hover {
+  color: #1890ff;
+}
+
+/* 职位元信息 */
+.job-meta {
+  margin-top: 8px;
+}
+
+.company-name {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.job-tags {
+  margin-bottom: 8px;
+}
+
+.job-tags .ant-tag {
+  margin: 2px;
+  font-size: 12px;
+}
+
+.job-desc {
+  font-size: 13px;
+  color: #999;
+  line-height: 1.4;
+  margin-top: 8px;
+}
+
+/* 分页样式 */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.pagination-container .ant-pagination {
+  display: flex;
+  align-items: center;
+}
+
+.pagination-container .ant-pagination-item {
+  border-radius: 6px;
+  border: 1px solid #d9d9d9;
+}
+
+.pagination-container .ant-pagination-item-active {
+  border-color: #1890ff;
+  background: #1890ff;
+}
+
+.pagination-container .ant-pagination-item-active a {
+  color: white;
+}
+
+.pagination-container .ant-pagination-prev,
+.pagination-container .ant-pagination-next {
+  border-radius: 6px;
+}
+
+/* 空状态样式 */
+.jobs-content .ant-empty {
+  margin: 60px 0;
+}
+
+.jobs-content .ant-empty-image {
+  height: 120px;
+}
+
+.jobs-content .ant-empty-description {
+  color: #999;
+  font-size: 16px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .jobs-page {
+    padding: 16px 0;
+  }
+  
+  .jobs-container {
+    padding: 0 16px;
+  }
+  
+  .jobs-content {
+    padding: 16px;
+  }
+  
+  .jobs-header {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  
+  .jobs-header h2 {
+    font-size: 20px;
+  }
+  
+  .filters-card .ant-card-body {
+    padding: 16px;
+  }
+  
+  .job-card {
+    height: auto;
+    min-height: 200px;
+  }
+  
+  .job-card .ant-card-body {
+    height: auto;
+  }
+  
+  .pagination-container {
+    margin-top: 24px;
+    padding-top: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .jobs-content {
+    padding: 12px;
+  }
+  
+  .job-card .ant-card-actions {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .job-card .ant-card-actions > li {
+    border-right: none !important;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .job-card .ant-card-actions > li:last-child {
+    border-bottom: none;
+  }
+}

@@ -1,0 +1,184 @@
+.auth-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 420px;
+}
+
+.auth-card {
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: none;
+  overflow: hidden;
+}
+
+.auth-card .ant-card-head {
+  border-bottom: 1px solid #f0f0f0;
+  text-align: center;
+  padding: 24px;
+}
+
+.auth-card .ant-card-head-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f1f1f;
+}
+
+.auth-card .ant-card-body {
+  padding: 32px;
+}
+
+/* 表单样式 */
+.auth-card .ant-form-item {
+  margin-bottom: 20px;
+}
+
+.auth-card .ant-input,
+.auth-card .ant-input-password,
+.auth-card .ant-select-selector {
+  border-radius: 6px;
+  border: 1px solid #d9d9d9;
+  transition: all 0.3s ease;
+}
+
+.auth-card .ant-input:focus,
+.auth-card .ant-input-password:focus,
+.auth-card .ant-select-focused .ant-select-selector {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.auth-card .ant-input-affix-wrapper .ant-input {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.auth-card .ant-input-prefix {
+  color: #999;
+  margin-right: 8px;
+}
+
+/* 用户类型选择 */
+.user-type-group {
+  width: 100%;
+  display: flex;
+}
+
+.user-type-group .ant-radio-button-wrapper {
+  flex: 1;
+  text-align: center;
+  border-radius: 6px;
+  margin: 0 2px;
+}
+
+.user-type-group .ant-radio-button-wrapper:first-child {
+  border-radius: 6px 0 0 6px;
+  margin-left: 0;
+}
+
+.user-type-group .ant-radio-button-wrapper:last-child {
+  border-radius: 0 6px 6px 0;
+  margin-right: 0;
+}
+
+.user-type-group .ant-radio-button-wrapper-checked {
+  background: #1890ff;
+  border-color: #1890ff;
+  color: white;
+}
+
+/* 按钮样式 */
+.auth-button {
+  height: 44px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  background: linear-gradient(135deg, #1890ff 0%, #52c41a 100%);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.auth-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.4);
+}
+
+.auth-button:active {
+  transform: translateY(0);
+}
+
+/* 快速登录按钮 */
+.quick-login-btn {
+  height: 40px;
+  border-radius: 6px;
+  border: 1px dashed #d9d9d9;
+  color: #666;
+  transition: all 0.3s ease;
+}
+
+.quick-login-btn:hover {
+  border-color: #1890ff;
+  color: #1890ff;
+  background: #f0f8ff;
+}
+
+/* 链接样式 */
+.auth-links {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.auth-links a {
+  color: #1890ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.auth-links a:hover {
+  color: #40a9ff;
+  text-decoration: underline;
+}
+
+/* 分割线样式 */
+.auth-card .ant-divider {
+  margin: 24px 0;
+  color: #999;
+  font-size: 14px;
+}
+
+.auth-card .ant-divider::before,
+.auth-card .ant-divider::after {
+  border-top: 1px solid #f0f0f0;
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+  .auth-page {
+    padding: 16px;
+  }
+  
+  .auth-card .ant-card-body {
+    padding: 24px 16px;
+  }
+  
+  .auth-card .ant-card-head-title {
+    font-size: 20px;
+  }
+  
+  .user-type-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .user-type-group .ant-radio-button-wrapper {
+    border-radius: 6px !important;
+    margin: 0 !important;
+  }
+}

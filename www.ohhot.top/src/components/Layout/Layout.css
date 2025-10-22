@@ -1,0 +1,25 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-main {
+  flex: 1;
+  padding-top: 60px; /* 添加顶部内边距，避免被固定Header遮挡 */
+  min-height: calc(100vh - 60px); /* 减去Header高度 */
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .layout-main {
+    padding-top: 60px; /* 保持顶部内边距，避免被固定Header遮挡 */
+    min-height: calc(100vh - 50px);
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
